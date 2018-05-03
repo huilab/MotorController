@@ -1,24 +1,27 @@
-/* DC Motor Controller Version 1.6
-   Written by Erik Werner and Amrith Karunaratne 2016 10 19
-   Last updated 2017 06 20 Erik Werner
-
-   Revision History:
-   1.0: Initial release
-   1.1 Improved speed data printing read-ability
-      Added option to reverse motor direction every 5 minutes
-   1.2 Changed reverse algorithm to fix motor 3 stalling issues
-      Changeed to suppress EEPROM write warnings
-   1.3 Changed EEPROMEx updateInt to writeInt
-   1.4 Fixed a bug where autoReverse flag was not saved and loaded on power cycle
-      Added the ability to change the autoReverse duration
-   1.5 Fixed a bug where negative signs were ignored when setting motor speeds
-      Added additional notes to help text to display on processor reset 
-   1.6 Added limit checks to motor speed and auto reverse interval input
-      Improved readability of statistics text output
-
-   Firmware for Arduino Uno and Sain Smart Motor Shield to Drive 4 DC motors
-   Note: Sain Smart Motor Shield uses Adafruit Motor Library v1.0
-   Note: EEPROM function uses EEPROMEx Library
+/* Motor Controller Version 1.6
+ *  
+ *  Author: Erik Werner 2016 10 19
+ *  Co-Authors: Amrith Karunaratne 2016 10 19
+ *  
+ *  Last update: 2018 05 03 Erik Werner
+ *
+ * Revision History:
+ * 1.0: Initial release
+ * 1.1 Improved speed data printing read-ability
+ *    Added option to reverse motor direction every 5 minutes
+ * 1.2 Changed reverse algorithm to fix motor 3 stalling issues
+ *    Changeed to suppress EEPROM write warnings
+ * 1.3 Changed EEPROMEx updateInt to writeInt
+ * 1.4 Fixed a bug where autoReverse flag was not saved and loaded on power cycle
+ *    Added the ability to change the autoReverse duration
+ * 1.5 Fixed a bug where negative signs were ignored when setting motor speeds
+ *    Added additional notes to help text to display on processor reset 
+ * 1.6 Added limit checks to motor speed and auto reverse interval input
+ *    Improved readability of statistics text output
+ *
+ * Firmware for Arduino Uno and Sain Smart Motor Shield to Drive 4 DC motors
+ * Note: Sain Smart Motor Shield uses Adafruit Motor Library v1.0
+ * Note: EEPROM function uses EEPROMEx Library
 */
 
 #include <EEPROMex.h>
